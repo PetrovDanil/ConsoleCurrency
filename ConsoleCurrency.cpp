@@ -7,6 +7,6 @@ using namespace std;
 
 int main()
 {
-	cout << "Hello CMake." << endl;
+	cout << Helper::getEnv("API_CURRENCY_TOKEN");
 	return 0;
 }

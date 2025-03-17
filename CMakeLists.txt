@@ -12,10 +12,12 @@ endif()
 project ("ConsoleCurrency")
 
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (ConsoleCurrency "ConsoleCurrency.cpp" "ConsoleCurrency.h")
+add_executable (ConsoleCurrency "ConsoleCurrency.cpp" "ConsoleCurrency.h" "Helper/Helper.cpp" "Helper/Helper.h")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET ConsoleCurrency PROPERTY CXX_STANDARD 20)
 endif()
 
 # TODO: Добавьте тесты и целевые объекты, если это необходимо.
+
+file(COPY ${CMAKE_SOURCE_DIR}/.env DESTINATION ${CMAKE_BINARY_DIR})
