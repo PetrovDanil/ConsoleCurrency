@@ -39,3 +39,5 @@ release/
 # Git specific
 .DS_Store
 Thumbs.db
+
+*.env
