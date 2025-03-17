@@ -1,0 +1,41 @@
+# Visual Studio files
+.vs/
+
+# CMake build files
+CMakeCache.txt
+CMakeFiles/
+CMakePresets.json
+CMakeUserPresets.json
+cmake-build-*/
+
+# Compiled binaries and output directories
+out/
+bin/
+build/
+debug/
+release/
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.a
+*.o
+*.obj
+*.pdb
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# IDE-specific files
+.idea/
+*.VC.db
+*.VC.opendb
+*.ipch
+
+# Git specific
+.DS_Store
+Thumbs.db
