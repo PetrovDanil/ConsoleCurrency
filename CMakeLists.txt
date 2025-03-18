@@ -12,7 +12,20 @@ endif()
 project ("ConsoleCurrency")
 
 # Добавьте источник в исполняемый файл этого проекта.
-add_executable (ConsoleCurrency "ConsoleCurrency.cpp" "ConsoleCurrency.h" "Helper/Helper.cpp" "Helper/Helper.h")
+add_executable (
+	ConsoleCurrency
+	"ConsoleCurrency.cpp"
+	"ConsoleCurrency.h"
+	"Infrastructure/Helper/Helper.cpp"
+	"Infrastructure/Helper/Helper.h"
+	"Infrastructure/Helper/Exceptions/EnvFileNotExist/EnvFileNotExist.cpp"
+	"Infrastructure/Helper/Exceptions/EnvFileNotExist/EnvFileNotExist.h"
+	"Infrastructure/Helper/Exceptions/EnvKeyNotExist/EnvKeyNotExist.cpp"
+	"Infrastructure/Helper/Exceptions/EnvKeyNotExist/EnvKeyNotExist.h"
+	"Infrastructure/Logger/Logger.cpp"
+    "Infrastructure/Logger/Logger.h"
+)
+
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET ConsoleCurrency PROPERTY CXX_STANDARD 20)
