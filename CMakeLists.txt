@@ -11,6 +11,14 @@ endif()
 
 project ("ConsoleCurrency")
 
+# Boost libs
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(Boost_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/vcpkg/installed/x64-windows/include")
+set(Boost_LIBRARY_DIR "${CMAKE_SOURCE_DIR}/vcpkg/installed/x64-windows/lib")
+find_package(Boost REQUIRED)
+include_directories(${Boost_INCLUDE_DIRS})
+
 # Добавьте источник в исполняемый файл этого проекта.
 add_executable (
 	ConsoleCurrency
@@ -32,5 +40,6 @@ if (CMAKE_VERSION VERSION_GREATER 3.12)
 endif()
 
 # TODO: Добавьте тесты и целевые объекты, если это необходимо.
-
+target_link_libraries(ConsoleCurrency ${Boost_LIBRARIES})
+set(CMAKE_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake" CACHE STRING "Vcpkg toolchain file")
 file(COPY ${CMAKE_SOURCE_DIR}/.env DESTINATION ${CMAKE_BINARY_DIR})

@@ -2,7 +2,6 @@
 //
 
 #include "ConsoleCurrency.h"
-#include "Infrastructure/Logger/Logger.h"
 
 using namespace std;
 

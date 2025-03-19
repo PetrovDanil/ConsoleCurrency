@@ -41,3 +41,5 @@ release/
 Thumbs.db
 
 *.env
+*/vcpkg/
+/vcpkg*
